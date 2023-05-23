@@ -1,10 +1,10 @@
 import java.math.RoundingMode
 import kotlin.random.Random
 
+
 interface Sensor{
     fun getTemperature(): Double
 }
-
 
 
 class RandomSensor(val min: Double, val max: Double) : Sensor{
@@ -23,6 +23,7 @@ class IncreasingSensor(val startTemp: Double): Sensor{
     }
 }
 
+//Aufgabe 2
 class SensorLogger(private val sensor: Sensor): Sensor{
     override fun getTemperature(): Double {
         val temperature = sensor.getTemperature()
